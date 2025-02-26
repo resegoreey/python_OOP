@@ -25,18 +25,6 @@ class BankAccount:
 Balance: R{self.balance}""")
             #pass
 
-# #creating the bank account object
-
-
-# #accesdding the attributes
-# print(bank_account.balance) #prints the value of the balance attribute
-# print(bank_account.account_number) #prints the value of the account_number attribute
-
-# #calling the methods
-
-# 
-# bank_account.check_balance()
-
 #INHERITANCE
 #creating a subclass that claculates interest on the balance
 class InterestAccount(BankAccount): # Child class
@@ -49,11 +37,14 @@ class InterestAccount(BankAccount): # Child class
             self.deposit(interest)
             print(f"Interested calculated: R{interest}")
 
+# creating the bank account object
 bank_account = BankAccount(2500, 1693446679)
-bank_account.deposit(100)
-bank_account.withdraw(500)
-bank_account.check_balance()
+# #accessing the attributes
+bank_account.deposit(100) #prints the value of the deposited amount
+bank_account.withdraw(500) #prints the value of the withdrawn amount
+bank_account.check_balance() #prints balance
+
 # interest account
 interest = InterestAccount(1200, 1693446679, 0.1)
-interest.calculate_interest()
-interest.check_balance()
+interest.calculate_interest() #print ths interest calculated
+interest.check_balance() #prints the balance
