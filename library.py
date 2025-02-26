@@ -27,6 +27,17 @@ class Book:
         else:
             print(f"No copies of {title} is available")
         pass
+class Library:
+    def __init__(self):
+        self.books = []
+    
+    def add_books(self, title, author, ISBN, available_copies):
+        book = Book(title, author, ISBN, available_copies)
+        self.books.append(book)
+        print(f"You added the book '{title}' by {author} to the collection")
+    def borrow_book(self):
+        
+
 
 library = Book("Nothing but the truth", "John Kani", "223-445-565-67", 45)
 library.borrow_book("Nothing but the truth")
