@@ -7,8 +7,8 @@ class Book:
 
     def borrow_book(self, title):
         self.tile = title
-        self.available_copies -= 1
-        if title:
+        if self.available_copies > 0:
+            self.available_copies -= 1
             print(f"You borrowed a book {title}, by {self.author}, ISBN: {self.ISBN} ")
         else:
             print("{title} not found on the shelf")
@@ -30,5 +30,5 @@ class Book:
 
 library = Book("Nothing but the truth", "John Kani", "223-445-565-67", 45)
 library.borrow_book("Nothing but the truth")
-library.return_book("Nothing but the truth")
+#library.return_book("Nothing but the truth")
 library.check_availability("Nothing but the truth")
