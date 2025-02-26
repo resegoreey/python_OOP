@@ -1,3 +1,4 @@
+# Parent class
 class BankAccount:
     def __init__(self, balance, account_number): #class attribute (balance, account_number)
         self. balance = balance
@@ -26,3 +27,9 @@ print(bank_account.account_number) #prints the value of the account_number attri
 bank_account.deposit()
 bank_account.withdraw()
 bank_account.check_balance()
+
+#INHERITANCE
+#creating a subclass that claculates interest on the balance
+class InterestAccount(BankAccount):
+      def __init__(self,balance, account_number, interest):
+            pass
